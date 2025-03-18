@@ -1,0 +1,97 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Bangers&family=Luckiest+Guy&display=swap');
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  list-style-type: none;
+  color: currentcolor;
+}
+:root{
+  --color: aliceblue;
+  --border: hsl(234, 100%, 85%);
+}
+.container{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.exception{
+  flex-wrap: nowrap;
+  align-items: flex-start;
+}
+.heading{
+  font-family: "Bangers", system-ui;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.sub-heading{
+  font-family: "Luckiest Guy", cursive;
+  font-weight: 400;
+  font-style: normal;
+  font-size: .9rem;
+}
+#head,.nav, #footer{
+  justify-content: space-between;
+  padding: 1em;
+  flex-wrap: nowrap;  
+  background: hsl(0, 0%, 75%);
+
+}
+#head.dark, #footer.dark, #intro.dark{
+  background: hsl(0, 2%, 25%);
+  color: var(--color);
+}
+#site-logo{
+  height: 3.5em;
+  aspect-ratio: 1/1;
+}
+#main{
+  height: clamp(550px, 80vh, 100000px);
+  display: flex;
+  flex-wrap: wrap;
+  align-items: stretch;
+  background: hsl(0, 0%, 90%);
+}
+nav{
+  flex: 1 1 max(100px, 20%);
+}
+nav.hidden{
+  display: none;
+}
+#menu{
+  flex: 1 1 min(100%, 1000px);
+  border-left: .02rem solid var(--border);
+}
+#main.dark{
+  background: hsl(0, 0%, 20%);
+  color: var(--color);
+}
+.nav{
+  background: none;
+  border-bottom: .02rem solid var(--border);
+}
+.nav.active-btn{
+  color: green;
+}
+.tab{
+  display: none;
+}
+.tab.active-tab{
+  display: block;
+}
+.exit{
+  font-size: 2rem;
+}
+#footer{
+  flex-direction: column;
+  gap: 1em;
+}
+@media screen and (min-width: 900px){
+  nav.hidden{
+    display: block;
+  }
+}
