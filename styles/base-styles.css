@@ -84,6 +84,9 @@ nav.hidden{
 .exit{
   font-size: 2rem;
 }
+#CTA-container{
+  gap: 1rem;
+}
 #footer{
   flex-direction: column;
   gap: 1em;

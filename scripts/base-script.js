@@ -70,11 +70,18 @@ document.addEventListener("DOMContentLoaded", function(){
   const tabb = document.querySelectorAll('.tab')
   const excepiton = document.getElementById('nav')
   const back = document.querySelectorAll('.exit')
+  const copy = document.getElementById('copy')
   
   activateDarkMode(themes, content)
   tabSwitch(nav, tabb)
   deactivateTab(back, nav, tabb)
   
+  copy.addEventListener('click', function(){
+    let url = window.location.href;
+    navigator.clipboard.writeText(url).then(() => {
+        alert("Link copied successfully!");
+    });
+  })
   nav.forEach(button=>{
     button.addEventListener('click', function(){
       excepiton.classList.add('hidden')
