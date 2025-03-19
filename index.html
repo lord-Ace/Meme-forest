@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="description" content="Meme Forest is a free online meme generator that runs entirely in your browser! No servers, no logins—just create, edit, and save your memes locally. Be sure to download your memes before clearing data!">
-  open graph for sharing
+  <!-- open graph for sharing -->
   <meta property="og:title" content="Meme Forest – Create & Save Memes Instantly!" />
 <meta property="og:description" content="Meme Forest is a free meme generator that works entirely in your browser! No accounts, no cloud storage—just pure meme magic. Be sure to save your memes before clearing data!" />
 <meta property="og:image" content="https://meme-forest.vercel.app/assets/displayImage.webp" />
@@ -15,7 +15,6 @@
   <link rel="preload" href="https://fonts.googleapis.com/css2?family=Bangers&family=Luckiest+Guy&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
   <link href="styles/base-styles.css" rel="stylesheet">
   
-  <!-- <script src="https://kit.fontawesome.com/44d62ac694.js" crossorigin="anonymous"></script> -->
   <script src="scripts/base-script.js"></script>
   <title>MEME FOREST</title>
 </head>
@@ -63,12 +62,13 @@
     <p class="sub-heading">SHARE MEME FOREST:</p>
     <div id="CTA-container" class="container">
       <a href="https://wa.me/?text=Check%20out%20meme%20forest!%20it allows%20create%20just%20as%20you%20like%20https://meme-forest.vercel.app" target="_blank" class="CTA" title="whatsapp">
-        <i class="fa-brands fa-square-whatsapp fa-2xl"></i></a>
+        <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAC0AAAAtCAYAAAA6GuKaAAAAAXNSR0IArs4c6QAAAdVJREFUaEPtmQtOwzAQRN2TASeDngw4GWikjDRa+bfpJJDKkaqqbew8P6/Xm/RWLnjcLshcFvRZs/aUpj/Osheu81VKwat69Ez//BGwXrbK14J+LaV8/gPot5rxFjTC4n1B7zOwTLe83SUGsfqxNnAw1Ph51vuhpgE7kx4BjQHMwh8CHWEjFGx/b1p1ULML3Q6twLMQ2TZWaBhEhziQz2enG+dnwK3QzO+zhuPC00H3dl4bNE0pMCDwPWN6JjsQqDdwGzQtqyHtPBMubNeybYHmtEY7Wg5k6paRbQt0LTQQCgqdifOWBIaXFTqGADvPWAYYoVvtLNDsJEJrNsiY5iwdCs3wqC22Xv7VOkQzyymmWzFNkBp4bzD87VDTIzNxx6vla52l3syhrSWmNVP08jELpVj5RaO1nK8DtUGPpjTGLKs8rat1Rk7ZEUe5dWYLnx24zfRoFxtB68Icbfl2aNQLWijF6a9Vdno7NgK2LUTdRFpG4+LjkyK+Z265LKYjNAFfttK0+ShrK1szpavVNLIBIGt3KwrdyhqjmD8k5WUu+ui5lvB4FCLbfkFnje09P2UaF7nc82mayTzP2Guz1W7XPwFuCFt/T/lHkc2Os6Nl2mmz19cv+cuzLiXNeuoAAAAASUVORK5CYII="/>
+      </a>
       <a href="https://www.facebook.com/sharer/sharer.php?u=https://meme-forest.vercel.app" target="_blank" class="CTA" title="facebook">
-        <i class="fa-brands fa-facebook fa-2xl"></i></i>
+        <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAC0AAAAtCAYAAAA6GuKaAAAAAXNSR0IArs4c6QAAARpJREFUaEPtmVESwiAMROnN9GTqydSTqevIhzGhQS1JO8tMv4rDY7MJwU5lhWNaIXMh9KiobVLpXSkFT8Q4Wou2lL5FkIo1VT4LGrs8JIDePyJ9kRyEXiAyqZSWIbeSPRwaoCfNo68InZVKFQoNWLOEZYSGwlBsbqRSWg2xsoNU0FZZlaetdi6EeNqyhvfwSgXtbREIPVcJ6nvLHlS6KuRNFKm4duJ9dGlGj46SJ8cQT3trsoRD+SO0N+kw71ulLTumtkcotEy6q9HdSf+m6qdZp2tyLX2xpdJUulHIaQ/ag/Z4V6Cr97BaxZ7mCXOHJiIW9F6JWhv5Fbrr/+kK8o+vAN6bi9y89rvnnE1+c+n18JD5VHqIzGv19B2POH4uR1Pu6wAAAABJRU5ErkJggg=="/>
       </a>
       <a href="tg://msg_url?url=https://meme-forest.vercel.app&text=Check%20this%20out!%20this%20website%20lets%20you%20create%20memes%20just%20as%20you%20want" target="_blank" class="CTA" title="telegram">
-        <i class="fa-brands fa-telegram fa-2xl"></i>
+        <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAC0AAAAtCAYAAAA6GuKaAAAAAXNSR0IArs4c6QAAAdhJREFUaEPtl2tSwzAMhN2TAScDTgacDFiwGcXRax2TJjPpTH80le3Pq5Xs3MoJP7cTMpcLeq+sXUpfSv8q8Pj9fe/FOKo9XkopzxUW0E8S/EjQAH2o6vbiAvpP8XtDAxSfpqpVFoeAlunP1O9C3D2Vzqrab+Iuns6o+ur4eTdoRlUAAwy+RotzixB/zrQHFsQ3KqoGBVhsDmPeHGMvinAWdCb9kgmqNnUzY1fCjirNpF8CN3XxLAO88vOI0pmFtExL2Cww4vpxP3NnlB5Vtfdu+81sfOVnD5otqoy6jMJtPlVU7SGjhAYLH35Uz8r/2XlVP1tKf2bOVSNG9WBtaVoP9paioFuvZRaxYAGFHszM1Tai+jlTiPKwsBa2gKNDI0roMLScuN+Ap+5WYFfQTMvTFFFfg2ogW3BWMS/eVmTQKLSV2hnAmNsswoynI9/19vEuPsxcpp9nQ492CW0zp4R2bTvT07OUdv28hz3QFrMvBdYFa2Wf/1Ra9nEmC66fZyst7yzawZNth6GQYQDRpxp0dFJaL7Bhf3bvqwSoDAW0ByxjLbuERTjbHt7Rrumg2SX082zokQT11+CUXVNBIzTkGCpLR4Gm9nhBU3JtCL6U3iAeNfSUSn8BvuNfLlcNlQgAAAAASUVORK5CYII="/>
       </a>
     </div>
     <p class="sub-heading" id="copy">copy site link</p>
