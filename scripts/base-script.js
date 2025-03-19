@@ -21,8 +21,8 @@ document.addEventListener("DOMContentLoaded", function(){
         lightMode()
       }
       else{
-        trigger.checked = true
-        darkMode()
+        trigger.checked = false
+        lightMode()
       }
     })
     trigger.addEventListener('change', function(){
