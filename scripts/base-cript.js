@@ -61,6 +61,7 @@ document.addEventListener("DOMContentLoaded", function(){
         tab.classList.remove('active-tab')
       })
       })
+      })
     })
   }
   
