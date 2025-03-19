@@ -78,7 +78,7 @@ document.addEventListener("DOMContentLoaded", function(){
   
   copy.addEventListener('click', function(){
     let url = window.location.href;
-    navigator.clipboard.writeText(url + "\n Check out this amazing website that allows you to create memes, it's really fun").then(() => {
+    navigator.clipboard.writeText(url +" " " \n Check out this amazing website that allows you to create memes, it's really fun").then(() => {
         alert("Link copied successfully!");
     });
   })
