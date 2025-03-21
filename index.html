@@ -14,6 +14,7 @@
   <link rel="shortcut icon" href="assets/images/logo.webp" type="image/x-icon"/>
   <link rel="preload" href="https://fonts.googleapis.com/css2?family=Bangers&family=Luckiest+Guy&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
   <link href="styles/base-styles.css" rel="stylesheet">
+  <link href="styles/artboard-styles.css" rel="stylesheet">
   <link href="assets/webfonts/all.css" rel="stylesheet">
   
   <script src="scripts/base-script.js"></script>
@@ -25,7 +26,7 @@
       <img src="assets/images/logo.webp" alt="logo of memeforest" id="site-logo">
       <div>
       <h1 class="heading">MEME FOREST</h1>
-      <p class="sub-heading">ENJOY THE WILDEDT MEMES</p>
+      <p class="sub-heading">ENJOY THE WILDEST MEMES</p>
     </div>
     
     </a>
@@ -38,10 +39,20 @@
         <li class="sub-heading nav container" id="previous-memes">&#9830;My memes <span>&#10148;</span></li>
       </ul>
     </nav>
-    <div id="menu">
+    <div id="tabs">
       <section class="tab" id="artboard">
         <span class="exit">&#10008;</span>
         <h2 class="container heading">ARTBOARD</h2>
+        <div id="toolbar" class="container">
+        <button class="sub-heading tool">
+          <i class="fa-solid fa-brush"></i>
+          Edit Canvas</button>
+        <button class="tool fa-solid fa-rotate-left fa-lg"></button>
+        <button class="tool fa-solid fa-rotate-right fa-lg"></button>
+        <button class="tool fa-solid fa-download fa-lg"></button>
+         <button class="tool fa-solid fa-circle-info fa-lg"></button>
+        </div>
+        <div id="menubar"></div>
       </section>
       <section class="tab" id="previous-works">
         <span class="exit">&#10008;</span>
@@ -80,5 +91,5 @@
     </h2>
     <p>Copyright &copy; 2025</p>
   </footer>
-</body>
 </html>
+</body>

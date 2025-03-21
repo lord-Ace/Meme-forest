@@ -60,7 +60,7 @@ nav{
 nav.hidden{
   display: none;
 }
-#menu{
+#tabs{
   flex: 1 1 min(100%, 1000px);
   border-left: .02rem solid var(--border);
 }

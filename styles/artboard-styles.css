@@ -1,0 +1,11 @@
+#toolbar{
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  padding: 1em;
+  box-shadow: 0 0 2px red;
+}
+.tool{
+  border: 0;
+  outline: 0;
+  background: none;
+}
