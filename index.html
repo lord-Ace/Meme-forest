@@ -15,7 +15,7 @@
   <link rel="preload" href="https://fonts.googleapis.com/css2?family=Bangers&family=Luckiest+Guy&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
   <link href="styles/base-styles.css" rel="stylesheet">
   <link href="styles/artboard-styles.css" rel="stylesheet">
-  <link href="assets/webfonts/all.css" rel="preload">
+  <link href="assets/webfonts/all.css" rel="stylesheet">
   
   <script src="scripts/base-script.js"></script>
   <title>MEME FOREST</title>
@@ -51,6 +51,15 @@
         <button class="tool fa-solid fa-rotate-right fa-lg"></button>
         <button class="tool fa-solid fa-download fa-lg"></button>
          <button class="tool fa-solid fa-circle-info fa-lg"></button>
+         <div id="editCanvas" class="container exception">
+           <label class="container">
+             Background:
+             <input type="color">
+           </label>
+           <label class="container">
+             Padding: <input type="number">
+           </label>
+         </div>
         </div>
         <div id="menubar"></div>
       </section>

@@ -1,11 +1,13 @@
-#toolbar{
-  flex-wrap: nowrap;
+#toolbar, #editCanvas{
   justify-content: space-between;
-  padding: 1em;
-  box-shadow: 0 0 2px red;
+  padding: .5em;
+  width: 100%;
 }
-.tool{
+.tool, input{
   border: 0;
   outline: 0;
   background: none;
+}
+#toolbar, #menubar{
+    box-shadow: 0 0 2px red;
 }

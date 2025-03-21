@@ -24,7 +24,6 @@
   font-family: "Bangers";
   font-weight: 400;
   font-style: normal;
-  font-size: 2rem;
 }
 
 .sub-heading{
@@ -58,7 +57,7 @@
 nav{
   flex: 1 1 max(10px, 15%);
 }
-nav.hidden{
+.hidden{
   display: none;
 }
 #tabs{
