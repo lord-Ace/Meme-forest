@@ -1,13 +1,10 @@
-#toolbar, #editCanvas{
-  justify-content: space-between;
-  padding: .5em;
+#tool-bar{
+  box-shadow: 0 0 2px green;
+  overflow: hidden;
+  padding: .5rem;
   width: 100%;
 }
-.tool, input{
-  border: 0;
-  outline: 0;
-  background: none;
-}
-#toolbar, #menubar{
-    box-shadow: 0 0 2px red;
+#edit-canvas{
+  /* background: green; */
+  overflow: auto hidden;
 }
