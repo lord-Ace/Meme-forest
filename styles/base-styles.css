@@ -59,6 +59,7 @@
   flex-wrap: wrap;
   align-items: stretch;
   background: hsl(0, 0%, 90%);
+  overflow-x: hidden;
 }
 nav{
   flex: 1 1 max(10px, 15%);
@@ -83,9 +84,11 @@ nav{
 }
 .tab{
   display: none;
+  height: 100%;
 }
 .tab.active-tab{
-  display: block;
+  display: flex;
+  flex-direction: column;
 }
 .exit{
   font-size: 2rem;
