@@ -17,8 +17,7 @@
   <link href="styles/artboard-styles.css" rel="stylesheet">
   <link href="assets/webfonts/all.css" rel="stylesheet">
   
-  <script src="scripts/base-script.js"></script>
-  <title>MEME FOREST</title>
+    <title>MEME FOREST</title>
 </head>
 <body>
   <header id="head" class="container edit">
@@ -42,19 +41,19 @@
     <div id="tabs">
       <section class="tab" id="artboard">
         <span class="exit">&#10008;</span>
-        <h2 class="heading container">ARTBOARD</h2>
+        <h2 class="heading container">ARTBOARD-<input id="projectname" type="text" value="untitled" class="heading"></h2>
         <div id="toolbar" class="container">
-          <button class="sub-heading">
-            <i class="fa-solid fa-brush"></i>
+          <button class="sub-heading tool" id="edit-artboard">
+            <i class="fa-solid fa-brush fa-lg"></i>
             EDIT ARTBOARD
           </button>
-          <i class="fa-solid fa-rotate-left"></i>
-          <i class="fa-solid fa-rotate-right"></i>
-          <button class="sub-heading">
-          <i class="fa-solid fa-download"></i>
+          <button class="fa-solid fa-rotate-left fa-lg tool"></button>
+          <button class="fa-solid fa-rotate-right fa-lg tool"></button>
+          <button class="sub-heading tool">
+          <i class="fa-solid fa-download fa-lg"></i>
           DOWNLOAD</button>
-          <i class="fa-solid fa-circle-info"></i>
-          <div id="editArtboard" class="container body-text">
+          <button class="fa-solid fa-circle-info fa-lg tool" id="info"></button>
+          <div id="editcanvas" class="container body-text">
             <span>Background:</span>
             <span>Padding:</span>
             <span>Round corners:</span>
@@ -64,6 +63,47 @@
         <div id="canvas">
           &nbsp;
         </div>
+        <div id="menubar" class="container sub-heading exception">
+        <button class="menu">Template</button>
+        <button class="menu">Text</button>
+        <button class="menu">Gallery</button>
+       <button class="menu">Collage</button>
+        <button class="menu">AI Touch</button>
+        <div id="template" class="menuItem">
+          <span>&nbsp;COMING SOON!!!&nbsp; COMING SOON!!!</span>
+          </div>
+        <div id="text" class="menuItem">
+          <button class="container">Add Text</button>
+          <button class="container">Font Size</button>
+          <button class="container">Color</button>
+          <button class="container">Bold</button>
+          <button class="container">Italic</button>
+          <button class="container">Underline</button>
+          <button class="container">heading</button>
+          <button class="container">Align</button>
+        </div>
+        <div id="gallery" class="menuItem">
+          <button class="container">Add/Replace</button>
+          <button class="container">Round Corners</button>
+          <button class="container">Flip</button>
+          <button class="container">Transparency</button>
+        </div>
+        <div id="collage" class="menuItem">
+          <button class="container">Gap</button>
+          <button class="container">Transparency</button>
+          <button class="container">Layout</button>
+        </div>
+        <div id="aiTouch" class="menuItem">&nbsp;COMING SOON!!! COMING SOON!!!</div>
+        <button class="hidden" id="back">&#10008;</button>
+        </div>
+        <dialog id="instructions" class="container">
+          
+          <button class="heading">&#10008;</button>
+          <div class="instruction">i</div>
+          <div class="instruction">o</div>
+          <div class="instruction"></div>
+          <div class="instruction"></div>
+        </dialog>
       </section>
       <section class="tab" id="previous-works">
         <span class="exit">&#10008;</span>
@@ -103,4 +143,6 @@
     <p>Copyright &copy; 2025</p>
   </footer>
 </body>
+<script src="scripts/base-script.js"></script>
+<script src="scripts/artboard-script.js"></script>
 </html>

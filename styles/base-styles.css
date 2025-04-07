@@ -5,6 +5,7 @@
   text-decoration: none;
   list-style-type: none;
   color: currentcolor;
+  scroll-behavior: smooth;
 }
 :root{
   --color: aliceblue;
@@ -62,13 +63,13 @@
   overflow-x: hidden;
 }
 nav{
-  flex: 1 1 max(10px, 15%);
+  flex: 1 1 max(10px, 10%);
 }
 .hidden{
   display: none;
 }
 #tabs{
-  flex: 1 1 min(100%, 1000px);
+  width: min(100%, 1000px);
   border-left: .02rem solid var(--border);
 }
 #main.dark{

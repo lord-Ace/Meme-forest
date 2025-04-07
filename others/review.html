@@ -7,28 +7,80 @@
   <link rel="icon" type="image/x-icon" href="../assets/images/logo.webp" />
   <title>Review&Feedback</title>
 </head>
+<style>
+body{
+  background: aliceblue;
+}
+h1{
+  text-align: center;
+}
+  form{
+    display: flex;
+    flex-direction: column;
+    gap: 1.5em;
+  }
+  input[type='text'],input[type='email'],input[type='email']:active, input[type='text']:active{
+    outline: 0;
+    border: 0;
+    background: none;
+    border-bottom: .1em solid black;
+    margin-top: .5em;
+    width: 70%;
+  }
+  fieldset{
+    display: flex;
+    gap: 1em;
+    flex-wrap: wrap;
+  }
+  textarea{
+    height: 10rem;
+    width: 100%;
+    background: none;
+  }
+</style>
 <body>
   <h1>
     FEEL FREE TO TELL US HOW YOU FEEL ABOUT MEME FOREST AND HOW WE CAN MAKE IT BETTER FOR YOU
   </h1>
-  <form action="https://docs.google.com/forms/d/e/1FAIpQLSfbnoLQstovF0spspFI8JGkduFaJ7wrEysa5VWDI98NCirSAQ/formResponse">
-    <label>Email: <input type="email" name="entry.904063296"></label>
-    <label>Full Name: <input type="text" name="entry.1048906958"></label>
+  <form id="myForm">
+    <label>Email: <br><input type="email" name="entry.904063296" placeholder="your email: ecample@gmail.com" required></label>
+    <label>Full Name: <br><input type="text" name="entry.1048906958" placeholder="JOHN SMITH" required></label>
     <fieldset>
-      <legend>How would you rate meme forest</legend>
-      <label><input type="radio" name="entry.536138880" value="1">&nbsp;1</label>
-      <label><input type="radio" name="entry.536138880" value="2">&nbsp;2</label>
-      <label><input type="radio" name="entry.536138880" value="3">&nbsp;3</label>
-      <label><input type="radio" name="entry.536138880" value="4">&nbsp;4</label>
-      <label><input type="radio" name="entry.536138880" value="5">&nbsp;5</label>
-      <label><input type="radio" name="entry.536138880" value="6">&nbsp;6</label>
-      <label><input type="radio" name="entry.536138880" value="7">&nbsp;7</label>
-      <label><input type="radio" name="entry.536138880" value="8">&nbsp;8</label>
-      <label><input type="radio" name="entry.536138880" value="9">&nbsp;9</label>
-      <label><input type="radio" name="entry.536138880" value="10">&nbsp;10</label>
+      <legend><strong>How would you rate meme forest?</strong></legend>
+      <label><input type="radio" name="entry.536138880" value="1" required>&nbsp;1</label>
+      <label class="radio"><input type="radio" name="entry.536138880" value="2">&nbsp;2</label>
+      <label class="radio"><input type="radio" name="entry.536138880" value="3">&nbsp;3</label>
+      <label class="radio"><input type="radio" name="entry.536138880" value="4">&nbsp;4</label>
+      <label class="radio"><input type="radio" name="entry.536138880" value="5">&nbsp;5</label>
+      <label class="radio"><input type="radio" name="entry.536138880" value="6">&nbsp;6</label>
+      <label class="radio"><input type="radio" name="entry.536138880" value="7">&nbsp;7</label>
+      <label class="radio"><input type="radio" name="entry.536138880" value="8">&nbsp;8</label>
+      <label class="radio"><input type="radio" name="entry.536138880" value="9">&nbsp;9</label>
+      <label class="radio"><input type="radio" name="entry.536138880" value="10">&nbsp;10</label>
     </fieldset>
-    <textarea name="entry.1595200658"></textarea>
+    <label>
+      Drop a comment or review on meme forest<br>
+    <textarea name="entry.1595200658" required></textarea></label>
     <button type="submit">SUBMIT</button>
   </form>
+  <h2 id="message"></h2>
 </body>
+<script>
+    document.getElementById("myForm").addEventListener("submit", function(event) {
+        event.preventDefault();
+
+        let formData = new FormData(this);
+
+        fetch("https://docs.google.com/forms/d/e/1FAIpQLSfbnoLQstovF0spspFI8JGkduFaJ7wrEysa5VWDI98NCirSAQ/formResponse", {
+            method: "POST",
+            body: formData,
+            mode: "no-cors" // Prevent CORS errors
+        }).then(() => {
+            document.getElementById("message").innerText = "Form submitted successfully Thanks for the Feedback";
+            document.getElementById("myForm").reset(); // Clear the form
+        }).catch(error => {
+            document.getElementById("message").innerText = "Error submitting form.";
+        });
+    });
+</script>
 </html>

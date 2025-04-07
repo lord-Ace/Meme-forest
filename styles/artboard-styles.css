@@ -1,7 +1,13 @@
-button{
+button, #projectname{
   outline: 0;
   border: 0;
   background: none;
+  font: inherit;
+}
+#projectname{
+  font-size: 2rem;
+  field-sizing: content;
+  min-width: 50px;
 }
 #toolbar{
   justify-content: space-between;
@@ -10,7 +16,8 @@ button{
   gap: .5em;
   padding: .5em 0;
 }
-#editArtboard{
+#editcanvas{
+  display: none;
   justify-content: space-between;
   border-radius: 10px;
   width: 100%;
@@ -18,10 +25,45 @@ button{
   box-shadow: -5px 5px 5px grey inset, 
   5px -5px 5px white inset;
 }
+#editcanvas.visible{
+  display: flex;
+}
 #canvas{
   background: red;
   height: 100px;
   width: 100px;
   margin: auto;
   align-self: center;
+  box-shadow: -5px -5px 6px hsl(0, 0%, 99%) inset,
+  5px 5px 6px grey inset;
+  border: 2px solid red;
+}
+button:active{
+  color: green;
+}
+#menubar{
+  gap: .5em;
+  justify-content: space-between;
+  overflow: hidden;
+  padding: 1em .5em;
+  box-shadow: 0 -3px 5px hsl(0, 0%, 99%),
+  0 3px 5px grey inset;
+}
+.menuItem{
+  display: none;
+  /* border-left: 3px solid green; */
+}
+.menuItem.active-tab{
+  display: flex;
+  width: 90%;
+  justify-content: space-between;
+  overflow: auto;
+  gap: 1em;
+}
+#instructions{
+  width: 80%;
+  height: 80%;
+  margin: auto;
+  overflow: hidden;
+  scroll-snap-type: x mandatory;
 }

@@ -35,61 +35,78 @@ document.addEventListener("DOMContentLoaded", function(){
       localStorage.setItem('modeState', trigger.checked ? 'true':'false')
     })
   }
-  
   function tabSwitch(pointers, tabs, index){
-    pointers.forEach((pointer, index)=>{
-      pointer.addEventListener('click', function(){
-        pointers.forEach(pointer=>{
-          pointer.classList.remove('active-btn')
-        })
-        tabs.forEach(tab=>{
-          tab.classList.remove('active-tab')
-        })
-        pointers[index].classList.add('active-btn')
-        tabs[index].classList.add('active-tab')
-      })
+    pointers.forEach(pointer=>{
+      pointer.classList.remove('active-btn')
     })
+    tabs.forEach(tab=>{
+      tab.classList.remove('active-tab')
+    })
+    pointers[index].classList.add('active-btn')
+    tabs[index].classList.add('active-tab')
   }
-  
   function deactivateTab(buttons, pointers, tabs){
-    buttons.forEach(button=>{
-      button.addEventListener('click', function(){
-        pointers.forEach(pointer=>{
-        pointer.classList.remove('active-btn')
-      })
-      tabs.forEach(tab=>{
-        tab.classList.remove('active-tab')
-      })
-      })
+    pointers.forEach(pointer=>{
+      pointer.classList.remove('active-btn')
+    })
+    tabs.forEach(tab=>{
+      tab.classList.remove('active-tab')
+      tab.classList.remove('container')
     })
   }
   
   const themes = document.getElementById('darkmode')
   const content = document.querySelectorAll('.edit')
   const nav = document.querySelectorAll('.nav')
-  const tabb = document.querySelectorAll('.tab')
+  const tabbs = document.querySelectorAll('.tab')
+  const exit = document.querySelectorAll('.exit')
   const excepiton = document.getElementById('nav')
-  const back = document.querySelectorAll('.exit')
-  const copy = document.getElementById('copy')
+  const menu = document.querySelectorAll('.menu')
+  const menuItem = document.querySelectorAll('.menuItem')
+  const back = document.getElementById('back')
+  const copy = document.getElementById('copy'); 
+  const instructions =document.getElementById('instructions')
+  const retreive = localStorage.getItem('opened1') 
   
   activateDarkMode(themes, content)
-  tabSwitch(nav, tabb)
-  deactivateTab(back, nav, tabb)
-  
+  nav.forEach((pointe, index)=>{
+    pointe.addEventListener('click', function(){
+      // localStorage.clear()
+      tabSwitch(nav, tabbs, index)
+      if (retreive == 'true'){
+        instructions.classList.remove('container')
+      }
+      excepiton.classList.add('hidden')
+    })
+  })
+  menu.forEach((pointe, index)=>{
+    pointe.addEventListener('click', function(){
+      menu.forEach(item=>{
+        item.classList.add('hidden')
+      })
+      this.classList.remove('hidden')
+      back.classList.remove('hidden')
+      tabSwitch(menu, menuItem, index)
+    })
+  })
+  exit.forEach(button=>{
+    button.addEventListener('click', function(){
+      deactivateTab(button, nav, tabbs)
+      excepiton.classList.remove('hidden')
+    })
+  })
+  back.addEventListener('click', function(){
+      deactivateTab(back, menu, menuItem)
+      this.classList.add('hidden')
+      menu.forEach(item=>{
+        item.classList.remove('hidden')
+      })
+    })
   copy.addEventListener('click', function(){
     let url = window.location.href;
     navigator.clipboard.writeText(`${url} \n Check out this amazing website that allows you to create memes, it's really fun`).then(() => {
         alert("Link copied successfully!");
     });
   })
-  nav.forEach(button=>{
-    button.addEventListener('click', function(){
-      excepiton.classList.add('hidden')
-    })
-  })
-  back.forEach(button=>{
-    button.addEventListener('click', function(){
-      excepiton.classList.remove('hidden')
-    })
-  })
+  localStorage.setItem('opened1', 'true')
 })
