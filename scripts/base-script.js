@@ -51,7 +51,6 @@ document.addEventListener("DOMContentLoaded", function(){
     })
     tabs.forEach(tab=>{
       tab.classList.remove('active-tab')
-      tab.classList.remove('container')
     })
   }
   
