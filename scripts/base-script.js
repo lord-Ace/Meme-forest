@@ -108,6 +108,10 @@ document.addEventListener("DOMContentLoaded", function(){
         item.classList.remove('hidden')
       })
     })
+  exit[2].addEventListener('click', function(){
+    deactivateTab(button, nav, tabbs)
+        excepiton.classList.remove('hidden')
+  })
   copy.addEventListener('click', function(){
     let url = window.location.href;
     navigator.clipboard.writeText(`${url} \n Check out this amazing website that allows you to create memes, it's really fun`).then(() => {
