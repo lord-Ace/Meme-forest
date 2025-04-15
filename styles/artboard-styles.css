@@ -3,6 +3,7 @@ button, #projectname{
   border: 0;
   background: none;
   font: inherit;
+  cursor: pointer;
 }
 #projectname{
   font-size: 2rem;
@@ -48,10 +49,10 @@ button:active{
   padding: 1em .5em;
   box-shadow: 0 -3px 5px hsl(0, 0%, 99%),
   0 3px 5px grey inset;
+  position: relative;
 }
 .menuItem{
   display: none;
-  /* border-left: 3px solid green; */
 }
 .menuItem.active-tab{
   display: flex;
@@ -79,4 +80,9 @@ button:active{
   scroll-snap-align: center;
   background: red;
   position: relative;
+}
+#confirm{
+  margin: 50% auto;
+  height: 20;
+  padding: 1rem;
 }

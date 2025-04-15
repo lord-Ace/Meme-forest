@@ -6,7 +6,6 @@
   list-style-type: none;
   color: currentcolor;
   scroll-behavior: smooth;
-  /* position: relative; */
 }
 :root{
   --color: aliceblue;
@@ -17,6 +16,12 @@
   align-items: center;
   justify-content: center;
   flex-wrap: wrap;
+}
+#ui{
+  position: absolute;
+  top: 0;
+  left: 0;
+  /* z-index: 3; */
 }
 .exception{
   flex-wrap: nowrap;

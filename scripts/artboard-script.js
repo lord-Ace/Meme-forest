@@ -21,3 +21,10 @@ close.forEach(clos=>{
   instructions.classList.remove('container')
 })
 })
+window.addEventListener("beforeunload", function (e) {
+  const confirmationMessage = "Are you sure you want to leave? Changes may not be saved.";
+  e.preventDefault();
+  e.returnValue = confirmationMessage;
+
+  return confirmationMessage;
+});

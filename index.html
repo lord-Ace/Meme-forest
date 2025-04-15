@@ -57,7 +57,7 @@
             <span>Background:</span>
             <span>Padding:</span>
             <span>Round corners:</span>
-            <span>CLEAR &#10008;</span>
+            <button>CLEAR &#10008;</button>
           </div>
         </div>
         <div id="canvas">
@@ -74,12 +74,14 @@
           </div>
         <div id="text" class="menuItem">
           <button class="container">Add Text</button>
-          <button class="container">Font Size</button>
-          <button class="container">Color</button>
+          <button class="container">Font Size </button>
+          <label class="container">Color <input type="color"></label>
           <button class="container">Bold</button>
           <button class="container">Italic</button>
           <button class="container">Underline</button>
-          <button class="container">heading</button>
+          <details class="container"><p id="ui">testing</p>
+          <summary>heading</summary>
+          </details>
           <button class="container">Align</button>
         </div>
         <div id="gallery" class="menuItem">
@@ -96,6 +98,11 @@
         <div id="aiTouch" class="menuItem">&nbsp;COMING SOON!!! COMING SOON!!!</div>
         <button class="hidden" id="back">&#10008;</button>
         </div>
+        <dialog id="confirm">
+         Do you want to leave?&nbsp;
+         <button id="yes">yes</button>
+         <button id="no">no</button>
+        </dialog>
         <dialog id="instructions" class="container exception">
           <div class="instruction">1
           <span class="close">&#10008;close</span>

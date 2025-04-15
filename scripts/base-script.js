@@ -90,8 +90,15 @@ document.addEventListener("DOMContentLoaded", function(){
   })
   exit.forEach(button=>{
     button.addEventListener('click', function(){
-      deactivateTab(button, nav, tabbs)
-      excepiton.classList.remove('hidden')
+      document.getElementById('confirm').showModal()
+      document.getElementById('yes').addEventListener('click', function(){
+          deactivateTab(button, nav, tabbs)
+        excepiton.classList.remove('hidden')
+      document.getElementById('confirm').close()
+      })
+      document.getElementById('no').addEventListener('click', function(){
+       document.getElementById('confirm').close()
+      })
     })
   })
   back.addEventListener('click', function(){
