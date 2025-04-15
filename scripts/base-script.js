@@ -102,15 +102,15 @@ document.addEventListener("DOMContentLoaded", function(){
     })
   })
   back.addEventListener('click', function(){
-      deactivateTab(back, menu, menuItem)
+      deactivateTab(button, nav, tabs)
       this.classList.add('hidden')
       menu.forEach(item=>{
         item.classList.remove('hidden')
       })
     })
-  exit[2].addEventListener('click', function(){
-    deactivateTab(button, nav, tabbs)
-        excepiton.classList.remove('hidden')
+  exit[1].addEventListener('click', function(){
+    deactivateTab(exit[1], nav, tabbs)
+    excepiton.classList.remove('hidden')
   })
   copy.addEventListener('click', function(){
     let url = window.location.href;
