@@ -88,11 +88,10 @@ document.addEventListener("DOMContentLoaded", function(){
       tabSwitch(menu, menuItem, index)
     })
   })
-  exit.forEach(button=>{
-    button.addEventListener('click', function(){
+  exit[0].addEventListener('click', function(){
       document.getElementById('confirm').showModal()
       document.getElementById('yes').addEventListener('click', function(){
-          deactivateTab(button, nav, tabbs)
+          deactivateTab(exit[0], nav, tabbs)
         excepiton.classList.remove('hidden')
       document.getElementById('confirm').close()
       })
@@ -100,18 +99,19 @@ document.addEventListener("DOMContentLoaded", function(){
        document.getElementById('confirm').close()
       })
     })
+  
+  exit[1].addEventListener('click', function(){
+    deactivateTab(exit[1], nav, tabbs)
+        excepiton.classList.remove('hidden')
   })
+  
   back.addEventListener('click', function(){
-      deactivateTab(button, nav, tabs)
+      deactivateTab(back, menu, menuItem)
       this.classList.add('hidden')
       menu.forEach(item=>{
         item.classList.remove('hidden')
       })
     })
-  exit[1].addEventListener('click', function(){
-    deactivateTab(exit[1], nav, tabbs)
-    excepiton.classList.remove('hidden')
-  })
   copy.addEventListener('click', function(){
     let url = window.location.href;
     navigator.clipboard.writeText(`${url} \n Check out this amazing website that allows you to create memes, it's really fun`).then(() => {
