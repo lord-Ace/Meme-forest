@@ -3,7 +3,7 @@ button, #projectname{
   border: 0;
   background: none;
   font: inherit;
-  cursor: pointer;
+  /* cursor: pointer; */
 }
 #projectname{
   font-size: 2rem;
