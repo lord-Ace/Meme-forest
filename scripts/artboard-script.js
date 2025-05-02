@@ -27,8 +27,10 @@ addtext.addEventListener('click', function(){
   const newTextElement = document.createElement('p')
   newTextElement.textContent = 'your text here'
   newTextElement.contentEditable = true
-  newTextElement.classList.add('goat')
+  // newTextElement.tabIndex = 0
+  newTextElement.classList.add('element')
   canvas.appendChild(newTextElement)
+  newTextElement.focus
 })
 window.addEventListener("beforeunload", function (e) {
   const confirmationMessage = "Are you sure you want to leave? Changes may not be saved.";

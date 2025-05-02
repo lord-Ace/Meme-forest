@@ -37,7 +37,7 @@ button, #projectname{
   align-self: center;
 }
 button:active{
-  color: green;
+  color: green; 
 }
 #menubar{
   gap: .5em;
@@ -88,4 +88,5 @@ button:active{
 }
 .edit{
   field-sizing: content;
+  text-wrap: nowrap;
 }
