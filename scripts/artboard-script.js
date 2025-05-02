@@ -1,8 +1,10 @@
+const canvas = document.getElementById('canvas')
 const editartboard = document.getElementById('edit-artboard')
 const editcanvas = document.getElementById('editcanvas')
 const info =document.getElementById('info')
 const instructions =document.getElementById('instructions')
 const close = document.querySelectorAll('.close')
+const addtext = document.getElementById('addtext')
 
 editartboard.addEventListener('click', function(){
   const checkState = editcanvas.classList.contains('visible')
@@ -20,6 +22,13 @@ close.forEach(clos=>{
   clos.addEventListener('click', function(){
   instructions.classList.remove('container')
 })
+})
+addtext.addEventListener('click', function(){
+  const newTextElement = document.createElement('p')
+  newTextElement.textContent = 'your text here'
+  newTextElement.contentEditable = true
+  newTextElement.classList.add('goat')
+  canvas.appendChild(newTextElement)
 })
 window.addEventListener("beforeunload", function (e) {
   const confirmationMessage = "Are you sure you want to leave? Changes may not be saved.";

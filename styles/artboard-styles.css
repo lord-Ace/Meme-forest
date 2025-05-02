@@ -3,7 +3,6 @@ button, #projectname{
   border: 0;
   background: none;
   font: inherit;
-  /* cursor: pointer; */
 }
 #projectname{
   font-size: 2rem;
@@ -31,13 +30,11 @@ button, #projectname{
 }
 #canvas{
   background: red;
-  height: 100px;
-  width: 100px;
+  height: min-content;
+  min-width: 200px;
+  width: min-content;
   margin: auto;
   align-self: center;
-  box-shadow: -5px -5px 6px hsl(0, 0%, 99%) inset,
-  5px 5px 6px grey inset;
-  border: 2px solid red;
 }
 button:active{
   color: green;
@@ -69,6 +66,10 @@ button:active{
   scroll-snap-type: x mandatory;
   gap: 3px;
 }
+#instructions::-webkit-scrollbar{
+  height: 0;
+  width: 0;
+}
 .close{
   position: absolute;
   right: 3%;
@@ -83,6 +84,8 @@ button:active{
 }
 #confirm{
   margin: 50% auto;
-  height: 20;
   padding: 1rem;
+}
+.edit{
+  field-sizing: content;
 }
