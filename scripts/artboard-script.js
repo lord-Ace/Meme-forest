@@ -57,7 +57,7 @@ close.forEach(clos=>{
 })
 addtext.addEventListener('click', function(){
   const newTextElement = document.createElement('p')
-  newTextElement.textContent = 'your text here'
+  // newTextElement.textContent = 'your text here'
   newTextElement.contentEditable = true
   newTextElement.classList.add('element')
   newTextElement.classList.add('active')
