@@ -10,7 +10,7 @@ button:focus{
 .exit{
   align-self: start;
 }
-#corners, #padding{
+#corners{
   width: 3rem;
 }
 #projectname{
@@ -53,11 +53,10 @@ button:active{
 #menubar{
   gap: .5em;
   justify-content: space-between;
-  overflow: hidden;
+  overflow: auto;
   padding: 1em .5em;
   box-shadow: 0 -3px 5px hsl(0, 0%, 99%),
   0 3px 5px grey inset;
-  position: relative;
 }
 .menuItem{
   display: none;
@@ -76,10 +75,6 @@ button:active{
   overflow: auto;
   scroll-snap-type: x mandatory;
   gap: 3px;
-}
-#instructions::-webkit-scrollbar{
-  height: 0;
-  width: 0;
 }
 .close{
   position: absolute;
@@ -100,6 +95,6 @@ button:active{
 .edit.text{
   text-wrap: nowrap;
 }
-.element:focus{
-  outline: 2px solid red;
+.elements:focus{
+  outline: 2px solid hsl(243, 77%, 14%);
 }

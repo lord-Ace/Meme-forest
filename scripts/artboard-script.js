@@ -12,10 +12,23 @@ const menu = document.querySelectorAll('.menu')
 const menuItem = document.querySelectorAll('.menuItem')
 const clear = document.getElementById('clear')
 let elementsEdit = {
-  text: '',
+  Text: menuItem[1],
   media: ''
 }
-console.log(elementsEdit.text)
+let text = 'text'
+
+function focus(element, creator, tabs){
+  element.addEventListener('focus', function(){
+    creator[element.name].classList.add('active-tab')
+    tabs.forEach(tab=>{
+      if (tab.textContent == element.name){
+        tab.classList.add('hidden')
+      }
+    })
+    // console.log(creator[element.name])
+  })
+}
+
 editartboard.addEventListener('click', function(){
   const checkState = editcanvas.classList.contains('visible')
   if (checkState == false){
@@ -59,10 +72,11 @@ addtext.addEventListener('click', function(){
   const newTextElement = document.createElement('p')
   // newTextElement.textContent = 'your text here'
   newTextElement.contentEditable = true
-  newTextElement.classList.add('element')
+  newTextElement.classList.add('elements')
   newTextElement.classList.add('active')
-  newTextElement.name = 'text'
+  newTextElement.name = 'Text'
   canvas.appendChild(newTextElement)
+  focus(newTextElement, elementsEdit)
   newTextElement.focus()
 })
 /*window.addEventListener("beforeunload", function (e) {
