@@ -10,6 +10,7 @@ const padding = document.querySelectorAll('.padding')
 const corners = document.getElementById('corners')
 const menu = document.querySelectorAll('.menu')
 const menuItem = document.querySelectorAll('.menuItem')
+const back = document.getElementById('back')
 const clear = document.getElementById('clear')
 let elementsEdit = {
   Text: menuItem[1],
@@ -17,15 +18,24 @@ let elementsEdit = {
 }
 let text = 'text'
 
-function focus(element, creator, tabs){
+function focus(element, creator, tabs, back){
   element.addEventListener('focus', function(){
     creator[element.name].classList.add('active-tab')
     tabs.forEach(tab=>{
-      if (tab.textContent == element.name){
+      if (tab.textContent != element.name){
         tab.classList.add('hidden')
-      }
-    })
-    // console.log(creator[element.name])
+        back.classList.remove('hidden')
+        }
+      })
+  })
+  element.addEventListener('blur', function(){
+    creator[element.name].classList.remove('active-tab')
+    tabs.forEach(tab=>{
+      if (tab.textContent != element.name){
+        tab.classList.remove('hidden')
+        back.classList.add('hidden')
+        }
+      })    
   })
 }
 
@@ -76,7 +86,7 @@ addtext.addEventListener('click', function(){
   newTextElement.classList.add('active')
   newTextElement.name = 'Text'
   canvas.appendChild(newTextElement)
-  focus(newTextElement, elementsEdit)
+  focus(newTextElement, elementsEdit, menu, back)
   newTextElement.focus()
 })
 /*window.addEventListener("beforeunload", function (e) {
