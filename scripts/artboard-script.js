@@ -19,7 +19,8 @@ let elementsEdit = {
 let text = 'text'
 
 function focus(element, creator, tabs, back){
-  element.addEventListener('focus', function(){
+  element.addEventListener('click', function(){
+    this.classList.add('active')
     creator[element.name].classList.add('active-tab')
     tabs.forEach(tab=>{
       if (tab.textContent != element.name){
@@ -27,15 +28,6 @@ function focus(element, creator, tabs, back){
         back.classList.remove('hidden')
         }
       })
-  })
-  element.addEventListener('blur', function(){
-    creator[element.name].classList.remove('active-tab')
-    tabs.forEach(tab=>{
-      if (tab.textContent != element.name){
-        tab.classList.remove('hidden')
-        back.classList.add('hidden')
-        }
-      })    
   })
 }
 

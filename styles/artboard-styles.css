@@ -95,6 +95,6 @@ button:active{
 .edit.text{
   text-wrap: nowrap;
 }
-.elements:focus{
+.elements.active{
   outline: 2px solid hsl(243, 77%, 14%);
 }
