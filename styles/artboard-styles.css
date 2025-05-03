@@ -34,7 +34,7 @@ button:focus{
   box-shadow: -5px 5px 5px grey inset, 
   5px -5px 5px white inset;
   overflow: auto;
-  position: relative;
+  gap: .5rem;
 }
 #editcanvas.visible{
   display: flex;
