@@ -4,10 +4,13 @@ button, #projectname{
   background: none;
   font: inherit;
 }
+#corners, #padding{
+  width: 2rem;
+}
 #projectname{
   font-size: 2rem;
-  field-sizing: content;
   min-width: 50px;
+  field-sizing: content;
 }
 #toolbar{
   justify-content: space-between;
@@ -29,12 +32,12 @@ button, #projectname{
   display: flex;
 }
 #canvas{
-  background: red;
-  height: min-content;
+  background: white;
   min-width: 200px;
-  width: min-content;
+  min-height: 200px;
   margin: auto;
   align-self: center;
+  padding: 1px 3px;
 }
 button:active{
   color: green; 
@@ -86,7 +89,9 @@ button:active{
   margin: 50% auto;
   padding: 1rem;
 }
-.edit{
-  field-sizing: content;
+.edit.text{
   text-wrap: nowrap;
+}
+.element:focus{
+  outline: 2px solid red;
 }
