@@ -41,6 +41,7 @@
 }
 #head,.nav, #footer{
   justify-content: space-between;
+  width: 100%;
   padding: 1em;
   flex-wrap: nowrap;  
   background: hsl(0, 0%, 75%);

@@ -6,7 +6,7 @@ const instructions =document.getElementById('instructions')
 const close = document.querySelectorAll('.close')
 const addtext = document.getElementById('addtext')
 const background = document.getElementById('Background')
-const padding = document.getElementById('padding')
+const padding = document.querySelectorAll('.padding')
 const corners = document.getElementById('corners')
 const menu = document.querySelectorAll('.menu')
 const menuItem = document.querySelectorAll('.menuItem')
@@ -15,7 +15,7 @@ let elementsEdit = {
   text: '',
   media: ''
 }
-console.log(elementsEdit.text.index)
+console.log(elementsEdit.text)
 editartboard.addEventListener('click', function(){
   const checkState = editcanvas.classList.contains('visible')
   if (checkState == false){
@@ -34,10 +34,20 @@ background.addEventListener('change', function(){
 corners.addEventListener('input', function(){
   canvas.style.borderRadius = `${this.value}px`
 })
+padding.forEach(one => {
+  one.addEventListener('input', function(){
+    if (this.name == 'top'){
+      canvas.style.paddingBottom = canvas.style.paddingTop = `${this.value}px`
+    }
+    else if (this.name == 'left'){
+      canvas.style.paddingLeft = canvas.style.paddingRight = `${this.value}px`
+    }
+  })
+})
 clear.addEventListener('click', function(){
   canvas.replaceChildren()
   canvas.style = ''
-  corners.value = ''
+  corners.value =padding[0].value=padding[1].value= ''
   background.value = '#ffffff'
 })
 close.forEach(clos=>{
@@ -55,10 +65,10 @@ addtext.addEventListener('click', function(){
   canvas.appendChild(newTextElement)
   newTextElement.focus()
 })
-window.addEventListener("beforeunload", function (e) {
+/*window.addEventListener("beforeunload", function (e) {
   const confirmationMessage = "Are you sure you want to leave? Changes may not be saved.";
   e.preventDefault();
   e.returnValue = confirmationMessage;
 
   return confirmationMessage;
-});
+});*/

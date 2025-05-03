@@ -39,14 +39,12 @@
   </header>
   <main id="main" class="edit">
     <nav id="nav">
-      <ul id="site-map">
-        <li class="sub-heading nav container" id="new-meme">&#9830;New meme<span> &#10148;</span></li>
-        <li class="sub-heading nav container" id="previous-memes">&#9830;My memes <span>&#10148;</span></li>
-      </ul>
+        <button class="sub-heading nav container" id="new-meme">&#9830;New meme<span> &#10148;</span></button>
+        <button class="sub-heading nav container" id="previous-memes">&#9830;My memes <span>&#10148;</span></button>
     </nav>
     <div id="tabs">
       <section class="tab" id="artboard">
-        <span class="exit">&#10008;</span>
+        <button class="exit">&#10008;</button>
         <h2 class="heading container">ARTBOARD-<input id="projectname" type="text" value="untitled" class="heading">
         </h2>
         <div id="toolbar" class="container">
@@ -59,12 +57,13 @@
           <button class="sub-heading tool">
             <i class="fa-solid fa-download fa-lg"></i>
             DOWNLOAD</button>
+          <button id="clear">CLEAR &#10008;</button>
           <button class="fa-solid fa-circle-info fa-lg tool" id="info"></button>
-          <div id="editcanvas" class="container body-text">
+          <div id="editcanvas" class="container body-text exception">
             <label class="container exception">Background: <input type="color" id="Background" value="#ffffff"></label>
-            <label>Padding: <input type="number" max="50" id="padding"></label>
-            <label>Corners: <input type="number" id="corners"></label>
-            <button id="clear">CLEAR &#10008;</button>
+            <label>Padding(top/bottom): <input type="number" min="0" max="50" class="padding" name="top"></label>
+            <label>Padding(left/right): <input type="number" min="0" max="50" class="padding" name="left"></label>
+            <label>Corners: <input type="number" min="0" id="corners"></label>
           </div>
         </div>
         <div id="canvas">
@@ -126,7 +125,7 @@
         </dialog>
       </section>
       <section class="tab" id="previous-works">
-        <span class="exit">&#10008;</span>
+        <cutton class="exit">&#10008;</button>
         <h2 class="heading container">SAVED MEMES</h2>
         <div>
           &nbsp;<br>
