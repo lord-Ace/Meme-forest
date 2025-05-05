@@ -14,12 +14,12 @@ const back = document.getElementById('back')
 const clear = document.getElementById('clear')
 let elementsEdit = {
   Text: menuItem[1],
-  media: ''
+  media: menuItem[2]
 }
-let text = 'text'
 
 function focus(element, creator, tabs, back){
-  element.addEventListener('click', function(){
+  element.addEventListener('focus', function(){
+    document.querySelectorAll('.elements').forEach(tag=>{tag.classList.remove('active')})
     this.classList.add('active')
     creator[element.name].classList.add('active-tab')
     tabs.forEach(tab=>{
