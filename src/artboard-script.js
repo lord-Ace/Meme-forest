@@ -32,16 +32,16 @@ function focus(element, creator, tabs, back){
 }
 
 editartboard.addEventListener('click', function(){
-  const checkState = editcanvas.classList.contains('visible')
+  const checkState = editcanvas.classList.contains('hidden')
   if (checkState == false){
-    editcanvas.classList.add('visible')
+    editcanvas.classList.add('hidden')
   }
   else{
-    editcanvas.classList.remove('visible')
+    editcanvas.classList.remove('hidden')
   }
 })
 info.addEventListener('click', function(){
-  instructions.classList.add('container')
+  instructions.classList.add('flex')
 })
 background.addEventListener('change', function(){
   canvas.style.background = this.value
@@ -52,10 +52,11 @@ corners.addEventListener('input', function(){
 padding.forEach(one => {
   one.addEventListener('input', function(){
     if (this.name == 'top'){
-      canvas.style.paddingBottom = canvas.style.paddingTop = `${this.value}px`
+      canvas.style.paddingBottom = canvas.style.paddingTop = `${this.value}px` 
     }
     else if (this.name == 'left'){
-      canvas.style.paddingLeft = canvas.style.paddingRight = `${this.value}px`
+      canvas.style.paddingRight = canvas.style.paddingLeft = `${this.value}px`
+
     }
   })
 })
@@ -72,7 +73,6 @@ close.forEach(clos=>{
 })
 addtext.addEventListener('click', function(){
   const newTextElement = document.createElement('p')
-  // newTextElement.textContent = 'your text here'
   newTextElement.contentEditable = true
   newTextElement.classList.add('elements')
   newTextElement.classList.add('active')

@@ -10,44 +10,43 @@
   <meta property="og:title" content="Meme Forest – Create & Save Memes Instantly!" />
   <meta property="og:description"
     content="Meme Forest is a free meme generator that works entirely in your browser! No accounts, no cloud storage—just pure meme magic. Be sure to save your memes before clearing data!" />
-  <meta property="og:image" content="https://meme-forest.vercel.app/assets/images/displayImage.webp" />
+  <meta property="og:image" content="https://meme-forest.vercel.app/public/images/displayImage.webp" />
   <meta property="og:url" content="https://meme-forest.vercel.app/" />
   <meta property="og:type" content="website" />
 
-  <link rel="shortcut icon" href="assets/images/logo.webp" type="image/x-icon" />
+  <link rel="shortcut icon" href="public/images/logo.webp" type="image/x-icon" />
   <link rel="preload" href="https://fonts.googleapis.com/css2?family=Bangers&family=Luckiest+Guy&display=swap"
     as="style" onload="this.onload=null;this.rel='stylesheet'">
-  <link href="styles/base-styles.css" rel="stylesheet">
-  <link href="styles/artboard-styles.css" rel="stylesheet">
-  <link href="assets/webfonts/all.css" rel="stylesheet">
+  <link href="src/artboard.css" rel="stylesheet">
+  <link href="public/webfonts/all.css" rel="stylesheet">
 
   <title>MEME FOREST</title>
 </head>
 
 <body>
-  <header id="head" class="container edit">
-    <a href="" id="intro" class="container exception">
-      <img src="assets/images/logo.webp" alt="logo of memeforest" id="site-logo">
+  <header id="head" class="flex edit">
+    <a href="" id="intro" class="flex items-center">
+      <img src="public/images/logo.webp" alt="logo of memeforest" id="site-logo">
       <div>
         <h1 class="heading">MEME FOREST</h1>
         <p class="sub-heading">ENJOY THE WILDEST MEMES</p>
       </div>
 
     </a>
-    <label id="theme" class="container exception sub-heading edit">Dark theme: &nbsp; <input type="checkbox"
+    <label id="theme" class="flex items-center sub-heading edit">Dark theme: &nbsp; <input type="checkbox"
         id="darkmode"></label>
   </header>
-  <main id="main" class="edit">
+  <main id="main" class="edit flex">
     <nav id="nav">
-        <button class="sub-heading nav container" id="new-meme">&#9830;New meme<span> &#10148;</span></button>
-        <button class="sub-heading nav container" id="previous-memes">&#9830;My memes <span>&#10148;</span></button>
+        <button class="sub-heading nav flex" id="new-meme">&#9830;New meme<span> &#10148;</span></button>
+        <button class="sub-heading nav flex" id="previous-memes">&#9830;My memes <span>&#10148;</span></button>
     </nav>
     <div id="tabs">
       <section class="tab" id="artboard">
         <button class="exit">&#10008;</button>
-        <h2 class="heading container">ARTBOARD-<input id="projectname" type="text" value="untitled" class="heading">
+        <h2 class="heading flex justify-center items-center">ARTBOARD-<input id="projectname" type="text" value="untitled" class="heading">
         </h2>
-        <div id="toolbar" class="container">
+        <div id="toolbar" class="flex flex-wrap">
           <button class="sub-heading tool" id="edit-artboard">
             <i class="fa-solid fa-brush fa-lg"></i>
             EDIT ARTBOARD
@@ -59,17 +58,16 @@
             </button>
           <button class="sub-heading" id="clear">CLEAR &#10008;</button>
           <button class="fa-solid fa-circle-info fa-lg tool" id="info"></button>
-          <div id="editcanvas" class="container body-text exception">
-            <label class="container exception">Background: <input type="color" id="Background" value="#ffffff"></label>
-            <label class="container exception">Padding(top/bottom): <input type="number" min="0" max="50" class="padding" name="top"></label>
-            <label class="container exception">Padding(left/right): <input type="number" min="0" max="50" class="padding" name="left"></label>
-            <label class="container exception">Corners: <input type="number" min="0" id="corners"></label>
+          <div id="editcanvas" class="flex body-text">
+            <label class="flex items-center">Background: <input type="color" id="Background" value="#ffffff"></label>
+            <label class="flex items-center">Padding(top/bottom): <input type="number" min="0" max="50" class="padding" name="top"></label>
+            <label class="flex items-center">Padding(left/right): <input type="number" min="0" max="50" class="padding" name="left"></label>
+            <label class="flex items-center">Corners: <input type="number" min="0" id="corners" class="w-12"></label>
           </div>
         </div>
         <div id="canvas">
-          &nbsp;
         </div>
-        <div id="menubar" class="container sub-heading exception">
+        <div id="menubar" class="flex sub-heading">
 
 
           <button class="menu">Template</button>
@@ -81,25 +79,25 @@
             <span>&nbsp;COMING SOON!!!&nbsp; COMING SOON!!!</span>
           </div>
           <div id="text" class="menuItem">
-            <button class="container edit text" id="addtext">Add Text</button>
-            <label class="container edit text exception">Font size<input type="number" name="font-size" max="30" min="10"></label>
-            <label class="container edit text exception">Color <input type="color"></label>
-            <button class="container edit text">Bold</button>
-            <button class="container edit text">Italic</button>
-            <button class="container edit text">Underline</button>
+            <button class="flex text" id="addtext">Add Text</button>
+            <label class="flex items-center text">Font size<input type="number" name="font-size" max="30" min="10"></label>
+            <label class="flex items-center  text">Color <input type="color"></label>
+            <button class="text">Bold</button>
+            <button class="text">Italic</button>
+            <button class="text">Underline</button>
             <button>heading</button>
-            <button class="container">Align</button>
+            <button class="text">Align</button>
           </div>
           <div id="gallery" class="menuItem">
-            <button class="container">Add/Replace</button>
-            <button class="container">Round Corners</button>
-            <button class="container">Flip</button>
-            <button class="container">Transparency</button>
+            <button class="flex">Add/Replace</button>
+            <button class="flex">Round Corners</button>
+            <button class="flex">Flip</button>
+            <button class="flex">Transparency</button>
           </div>
           <div id="collage" class="menuItem">
-            <button class="container">Gap</button>
-            <button class="container">Transparency</button>
-            <button class="container">Layout</button>
+            <button class="flex">Gap</button>
+            <button class="flex">Transparency</button>
+            <button class="flex">Layout</button>
           </div>
           <div id="aiTouch" class="menuItem">&nbsp;COMING SOON!!! COMING SOON!!!</div>
           <button class="hidden" id="back">&#10008;</button>
@@ -109,7 +107,7 @@
           <button id="yes">yes</button>
           <button id="no">no</button>
         </dialog>
-        <dialog id="instructions" class="container exception">
+        <dialog id="instructions" class="flex">
           <div class="instruction">1
             <span class="close">&#10008;close</span>
           </div>
@@ -126,12 +124,12 @@
       </section>
       <section class="tab" id="previous-works">
         <cutton class="exit">&#10008;</button>
-        <h2 class="heading container">SAVED MEMES</h2>
+        <h2 class="heading flex justify-center">SAVED MEMES</h2>
         <div>
           &nbsp;<br>
           &nbsp;
         </div>
-        <h3 class="container heading">
+        <h3 class="flex heading justify-center">
           DISCLAIMER! DISCLAIMER! DISCLAIMER!
         </h3>
         <p class="sub-heading" i style="text-align: center;">
@@ -141,9 +139,9 @@
       </section>
     </div>
   </main>
-  <footer id="footer" class="container">
+  <footer id="footer" class="flex items-center gap-8 flex-col edit">
     <p class="sub-heading">SHARE MEME FOREST:</p>
-    <div id="CTA-container" class="container">
+    <div id="CTA-container" class="flex gap-3">
       <a href="https://wa.me/?text=Check%20out%20meme%20forest!%20it allows%20create%20just%20as%20you%20like%20https://meme-forest.vercel.app"
         target="_blank" class="CTA" title="whatsapp">
         <i class="fa-brands fa-square-whatsapp fa-2x"></i>
@@ -166,7 +164,6 @@
       <p>Copyright &copy; 2025</p>
   </footer>
 </body>
-<script src="scripts/base-script.js"></script>
-<script src="scripts/artboard-script.js"></script>
-
+<script src="src/artboard-script.js"></script>
+<script type="module" src="/src/main.js"></script>
 </html>
