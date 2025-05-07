@@ -1,5 +1,3 @@
-import './style.css'
-
 document.addEventListener("DOMContentLoaded", function(){
   // localStorage.clear()
   function activateDarkMode(trigger, victims){
@@ -75,7 +73,7 @@ document.addEventListener("DOMContentLoaded", function(){
       // localStorage.clear()
       tabSwitch(nav, tabbs, index)
       if (retreive == 'true'){
-        instructions.classList.remove('flex')
+        instructions.classList.remove('container')
       }
       excepiton.classList.add('hidden')
     })
