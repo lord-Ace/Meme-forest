@@ -12,6 +12,8 @@ const menu = document.querySelectorAll('.menu')
 const menuItem = document.querySelectorAll('.menuItem')
 const back = document.getElementById('back')
 const clear = document.getElementById('clear')
+const edit = document.querySelectorAll('.edit')
+const differ = document.querySelectorAll('.differ')
 let elementsEdit = {
   Text: menuItem[1],
   media: menuItem[2]
@@ -31,19 +33,36 @@ function focus(element, creator, tabs, back){
   })
 }
 
+function styleMe(styler, styled){
+  styled.forEach(tag=>{
+    switch(styler.name){
+      case 'font-size':
+        tag.style.cssText += `${styler.name}: ${styler.value}px;`
+        break;
+      default:
+        tag.style.cssText += `${styler.name}: ${styler.value};`
+    } 
+  })
+}
+function unStyleMe(styler, styled){
+  styled.forEach(tag=>{
+    tag.style.cssText += `${styler.name}: unset;`
+  })
+}
+
 editartboard.addEventListener('click', function(){
-  const checkState = editcanvas.classList.contains('visible')
+  const checkState = editcanvas.classList.contains('hidden')
   if (checkState == false){
-    editcanvas.classList.add('visible')
+    editcanvas.classList.add('hidden')
   }
   else{
-    editcanvas.classList.remove('visible')
+    editcanvas.classList.remove('hidden')
   }
 })
 info.addEventListener('click', function(){
   instructions.classList.add('container')
 })
-background.addEventListener('change', function(){
+background.addEventListener('input', function(){
   canvas.style.background = this.value
 })
 corners.addEventListener('input', function(){
@@ -72,7 +91,6 @@ close.forEach(clos=>{
 })
 addtext.addEventListener('click', function(){
   const newTextElement = document.createElement('p')
-  // newTextElement.textContent = 'your text here'
   newTextElement.contentEditable = true
   newTextElement.classList.add('elements')
   newTextElement.classList.add('active')
@@ -80,6 +98,24 @@ addtext.addEventListener('click', function(){
   canvas.appendChild(newTextElement)
   focus(newTextElement, elementsEdit, menu, back)
   newTextElement.focus()
+})
+edit.forEach(item=>{
+  item.addEventListener('input', function(){
+    const active = document.querySelectorAll('.active')
+    styleMe(item, active)
+  })
+})
+differ.forEach(item=>{
+  item.addEventListener('click', function(){
+    const active = document.querySelectorAll('.active')
+    if(this.classList.contains('selected')){
+      unStyleMe(item,active)
+      this.classList.remove('selected')
+    }else{
+      styleMe(item, active)
+      this.classList.add('selected')
+    }
+  })
 })
 /*window.addEventListener("beforeunload", function (e) {
   const confirmationMessage = "Are you sure you want to leave? Changes may not be saved.";

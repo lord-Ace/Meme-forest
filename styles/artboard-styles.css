@@ -1,11 +1,11 @@
+input[type=number],p.elements{
+  color: black;
+}
 button, #projectname{
   outline: 0;
   border: 0;
   background: none;
   font: inherit;
-}
-button:focus{
-  outline: 1px solid black;
 }
 .exit{
   align-self: start;
@@ -26,7 +26,6 @@ button:focus{
   padding: .5em 0;
 }
 #editcanvas{
-  display: none;
   justify-content: space-between;
   border-radius: 10px;
   width: 100%;
@@ -35,9 +34,6 @@ button:focus{
   5px -5px 5px white inset;
   overflow: auto;
   gap: .5rem;
-}
-#editcanvas.visible{
-  display: flex;
 }
 #canvas{
   background: white;
@@ -50,7 +46,7 @@ button:focus{
 button:active{
   color: green; 
 }
-#menubar{
+#menubar, .differ.selected{
   gap: .5em;
   justify-content: space-between;
   overflow: auto;
@@ -95,6 +91,6 @@ button:active{
 .edit.text{
   text-wrap: nowrap;
 }
-.elements.active, elements:focus{
+button:focus, .elements.active, elements:focus{
   outline: 2px solid hsl(243, 77%, 14%);
 }

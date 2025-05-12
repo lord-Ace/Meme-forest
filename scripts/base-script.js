@@ -55,7 +55,7 @@ document.addEventListener("DOMContentLoaded", function(){
   }
   
   const themes = document.getElementById('darkmode')
-  const content = document.querySelectorAll('.edit')
+  const content = document.querySelectorAll('.state')
   const nav = document.querySelectorAll('.nav')
   const tabbs = document.querySelectorAll('.tab')
   const exit = document.querySelectorAll('.exit')

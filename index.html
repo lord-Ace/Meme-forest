@@ -5,7 +5,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="description"
-    content="Meme Forest is a free online meme generator that runs entirely in your browser! No servers, no logins—just create, edit, and save your memes locally. Be sure to download your memes before clearing data!">
+    content="Meme Forest is a free online meme generator that runs entirely in your browser! No servers, no logins—just create, state, and save your memes locally. Be sure to download your memes before clearing data!">
   <!-- open graph for sharing -->
   <meta property="og:title" content="Meme Forest – Create & Save Memes Instantly!" />
   <meta property="og:description"
@@ -25,7 +25,7 @@
 </head>
 
 <body>
-  <header id="head" class="container edit">
+  <header id="head" class="container state">
     <a href="" id="intro" class="container exception">
       <img src="assets/images/logo.webp" alt="logo of memeforest" id="site-logo">
       <div>
@@ -34,10 +34,10 @@
       </div>
 
     </a>
-    <label id="theme" class="container exception sub-heading edit">Dark theme: &nbsp; <input type="checkbox"
+    <label id="theme" class="container exception sub-heading state">Dark theme: &nbsp; <input type="checkbox"
         id="darkmode"></label>
   </header>
-  <main id="main" class="edit">
+  <main id="main" class="state">
     <nav id="nav">
         <button class="sub-heading nav container" id="new-meme">&#9830;New meme<span> &#10148;</span></button>
         <button class="sub-heading nav container" id="previous-memes">&#9830;My memes <span>&#10148;</span></button>
@@ -67,11 +67,8 @@
           </div>
         </div>
         <div id="canvas">
-          &nbsp;
         </div>
         <div id="menubar" class="container sub-heading exception">
-
-
           <button class="menu">Template</button>
           <button class="menu">Text</button>
           <button class="menu">Gallery</button>
@@ -81,12 +78,12 @@
             <span>&nbsp;COMING SOON!!!&nbsp; COMING SOON!!!</span>
           </div>
           <div id="text" class="menuItem">
-            <button class="container edit text" id="addtext">Add Text</button>
-            <label class="container edit text exception">Font size<input type="number" name="font-size" max="30" min="10"></label>
-            <label class="container edit text exception">Color <input type="color"></label>
-            <button class="container edit text">Bold</button>
-            <button class="container edit text">Italic</button>
-            <button class="container edit text">Underline</button>
+            <button class="container" id="addtext">Add Text</button>
+            <label class="container exception">Font size<input type="number" name="font-size" max="50" min="16" class="edit"></label>
+            <label class="container exception">Color <input type="color" id="love" name="color" class="edit"></label>
+            <button class="container differ" name="font-weight" value="bold">Bold</button>
+            <button class="container differ" name="font-style" value="italic">Italic</button>
+            <button class="container differ" name="text-decoration" value="underline">Underline</button>
             <button>heading</button>
             <button class="container">Align</button>
           </div>
@@ -141,7 +138,7 @@
       </section>
     </div>
   </main>
-  <footer id="footer" class="container">
+  <footer id="footer" class="container state">
     <p class="sub-heading">SHARE MEME FOREST:</p>
     <div id="CTA-container" class="container">
       <a href="https://wa.me/?text=Check%20out%20meme%20forest!%20it allows%20create%20just%20as%20you%20like%20https://meme-forest.vercel.app"
